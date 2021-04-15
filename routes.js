@@ -10,7 +10,7 @@ router.get("/", function (req, res) {
 router.post("/", function (req, res) {
   const newItem = { name: req.body.name, price: req.body.price };
   items.push(newItem);
-  res.status(201).json({ added: { item: newItem } });
+  res.status(201).json({ added: newItem });
 });
 
 router.get("/:name", function (req, res) {
